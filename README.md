@@ -27,24 +27,32 @@ The GitHub Repo Scraper is a Python tool designed to fetch code snippets from a 
 
 ## Example
 To scrape a repository owned by your_username named your_repo, modify the script:
-   `owner = 'your_username'`
-   `repo_name = 'your_repo'`
+```pyhton
+   owner = 'your_username'
+   repo_name = 'your_repo'
+   ```
+
 
 ## Functions
--`fetch_repo_data(repo_url)`: Fetches repository contents from GitHub API.
--`clone_repo(repo_url)`: Clones the specified GitHub repository.
--`extract_code_snippets(path)`: Walks through the cloned repository and extracts code snippets from relevant files.
--`create_dataset(snippets)`: Creates a dataset from the extracted snippets, formatted as input-output pairs.
+- `fetch_repo_data(repo_url)`: Fetches repository contents from the GitHub API.
 
-##Dataset Format
+- `clone_repo(repo_url)`: Clones the specified GitHub repository.
+
+- `extract_code_snippets(path)`: Walks through the cloned repository and extracts code snippets from relevant files.
+
+- `create_dataset(snippets)`: Creates a dataset from the extracted snippets, formatted as input-output pairs.
+
+
+## Dataset Format
 The resulting training_data.json file will contain a list of JSON objects, each with the following structure:
-
-`[
-    {
-        "input": "code snippet here",
-        "output": "your expected response"
-    }
-]`
+   ```json
+   [
+       {
+           "input": "code snippet here",
+           "output": "your expected response"
+       }
+   ]
+```
 
 
 
